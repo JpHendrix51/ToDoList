@@ -17,6 +17,7 @@ export class Home extends React.Component {
 							this.setState({
 								array: this.state.array.concat(e.target.value)
 							});
+							e.target.value = "";
 						}
 					}}
 				/>
@@ -28,7 +29,7 @@ export class Home extends React.Component {
 								className=" col-6 mx-auto list-group-item d-flex justify-content-between">
 								{item}
 								<i
-									className="fas fa-skull"
+									className="fas fa-skull text-dark"
 									onClick={() => {
 										let x = this.state.array;
 										x.splice(index, 1);
