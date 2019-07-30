@@ -25,8 +25,16 @@ export class Home extends React.Component {
 						return (
 							<li
 								key={index}
-								className=" col-6 mx-auto list-group-item">
+								className=" col-6 mx-auto list-group-item d-flex justify-content-between">
 								{item}
+								<i
+									className="fas fa-skull"
+									onClick={() => {
+										let x = this.state.array;
+										x.splice(index, 1);
+										this.setState({ array: x });
+									}}
+								/>
 							</li>
 						);
 					})}
